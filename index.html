@@ -4,20 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>용우의 포트폴리오</title>
+    <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
-    <h1>경력</h1>
-    <h1>교육</h1>
-    <h1>Toy Project</h1>
-    1. 브랜드 홍보 웹페이지 <br>
-    - HTML, CSS, Youtube 동영상 backgroud <!-- -어떤 기술을 사용했는지 표현 잘하기 -->
-    
-    2. KIA 자동차 데모 웹페이지<br>
-    - HTML, CSS, Bootstrap, Resonsive Web 
-    <a href="" target="_blank">KIA</a>
+ <!-- header.html -->
+<header>
+    <h1>용우의 포트폴리오</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">소개</a></li>
+            <li><a href="#education">교육</a></li>
+            <li><a href="#projects">프로젝트</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <h1>Mini Project01</h1>
-    <h1>Mini Project02</h1>
-    <h1>Final Project</h1>
+
+    <main>
+        <section id="intro">
+            <h2>소개</h2>
+            <hr>
+            <div>
+                포트폴리오를 정리하고자 한 사이트입니다. 주로 html과 css를 복습하기 위해서도 목적으로 만들었지만, 포트폴리오를 보다 한곳에 모아서 관리하기 위함을 작성되었습니다.
+                
+            </div>
+        </section>
+        <hr>
+
+        <section id="education">
+            <h2>교육</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>연수 기간</th>
+                        <th>연수 과정</th>
+                        <th>연수 기관</th>
+                        <th>배운 내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024.05 - 2024.11</td>
+                        <td>풀스택 프레임웤크(자바,스프링)기반 데이터 융합SW개발자 과정</td>
+                        <td>글로벌아이티인재개발원</td>
+                        <td>spring-boot & react로 웹 개발(풀스택)</td>
+                    </tr>
+                    <tr>
+                        <td>2021.06 - 2021.11</td>
+                        <td>ICT 산업융합을 위한 응용SW엔지니어링</td>
+                        <td>한국ICT인재개발원</td>
+                        <td>java 기반으로 웹서버 구축(Spring)</td>
+                    </tr>
+                    <tr>
+                        <td>2019.05 - 2019.11</td>
+                        <td>ICT기반 정보시스템 보안엔지니어 양성</td>
+                        <td>케이지아이티뱅크</td>
+                        <td>네트워크구축, 칼리로 이용한 모의해킹과, 보안방법</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <hr>
+
+        <section id="projects">
+         
+
+            <h2>Mini Project01</h2> 
+            <div> 
+                <a href="/pj01/pj01.html">JSP를 이용한 이미지 블로그 만들기</a> 
+            </div> 
+            <div>사용기술 : HTML5, CSS3, JavaScript, JQuery, BootStrap5, Java, JSP, Servlet, Oracle, Apache Tomcat
+
+            </div>
+            <!-- Mini Project01 내용 추가 -->
+
+            <h2>Mini Project02</h2>
+            <!-- Mini Project02 내용 추가 -->
+
+            <h2>Final Project</h2>
+            <!-- Final Project 내용 추가 -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 용우의 포트폴리오</p>
+    </footer>
 </body>
 </html>
