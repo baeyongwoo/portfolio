@@ -12,12 +12,40 @@
     <h1>용우의 포트폴리오</h1>
     <nav>
         <ul>
-            <li><a href="index.html">소개</a></li>
+            <li><a href="#intro">소개</a></li>
+            <li><a href="#info">인적사항</a></li>
             <li><a href="#education">교육</a></li>
             <li><a href="#projects">프로젝트</a></li>
         </ul>
     </nav>
 </header>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+        });
+
+        document.querySelectorAll('header nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - header.offsetHeight,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+</script>
 
 
     <main>
@@ -25,8 +53,48 @@
             <h2>소개</h2>
             <hr>
             <div>
-                포트폴리오를 정리하고자 한 사이트입니다. 주로 html과 css를 복습하기 위해서도 목적으로 만들었지만, 포트폴리오를 보다 한곳에 모아서 관리하기 위함을 작성되었습니다.
+                과거에 개발경험이 있는 학사학위를 가지고 있는 여러 피드백을 수용하며, 적극적으로 자기개발에 힘을 쓰고 있는 미래의 개발자입니다.<br><br>
+                복무기간때문에 경력이 살짝 단절되었지만, 웹사이트를 만들면서 트러블슈팅하고, 개발하는 것이 재미있어서 복무 후에도 개발쪽으로 계속 이어가려고 합니다.
+                <br><br>
+                주로 관심있는 분야는 현재는 웹 개발이지만, 향 후 IT 트렌드에 맞춰서 인공지능, 딥러닝 등등에도 한번 유튜브나 서적보면서 공부할 계획입니다.
+
                 
+            </div>
+        </section>
+        
+        <section id="info">
+            
+            <div class="container"> 
+                <h2>인적사항</h2> 
+                <hr> 
+                <div class="info-item"> 
+                    <span class="info-label">Name:</span> 
+                    <span class="info-content">배용우</span> 
+                </div> 
+                <div class="info-item"> 
+                    <span class="info-label">AC:</span> 
+                    <span class="info-content">컴퓨터 공학과 학사학위</span> 
+                </div>
+                <div class="info-item"> 
+                    <span class="info-label">Army:</span> 
+                    <span class="info-content">31사단 육군 만기 전역(22.07 - 24.01)</span> 
+                </div> 
+                <div class="info-item"> 
+                    <span class="info-label">Birth:</span>
+                    <span class="info-content">970314</span>
+                </div> 
+                <div class="info-item"> 
+                    <span class="info-label">Email:</span> 
+                    <span class="info-content">dyddn30612@naver.com</span> 
+                </div> 
+                <div class="info-item"> 
+                    <span class="info-label">P.H:</span> 
+                    <span class="info-content">010-7180-3168</span> 
+                </div> <div class="links"> 
+                    <a href="https://github.com/baeyongwoo" class="link-item">My GitHub</a> 
+                    <a href="https://blog.naver.com/dyddn30612" class="link-item">My Blog</a> 
+                    <a href="https://baeyongwoo.notion.site/AI-29242938f0454c219a26e575cff24348?pvs=74" class="link-item">My Notion</a> 
+                </div> 
             </div>
         </section>
         <hr>

@@ -12,13 +12,23 @@
     <h1>용우의 프로젝트</h1>
     <nav>
         <ul>
-            <li><a href="../index.html">메인</a></li>
+            <li><a href="/index.html">메인</a></li>
             <li><a href="#">프로젝트01</a></li>
             <li><a href="../pj02/pj02.html">프로젝트02</a></li>
             <li><a href="../pj03/pj03.html">프로젝트03</a></li>
         </ul>
     </nav>
 </header>
+<script>
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+            header.classList.add('shrink');
+        } else {
+            header.classList.remove('shrink');
+        }
+    });
+</script>
 
 
     <main>
@@ -104,8 +114,14 @@
 
         <div>
             <img src="img/pj_db.png" alt="">
+            <div>
+                db분석 : 먼저 db설계는 위와 같은 사진으로 구현하였습니다. <br>먼저 회원 정보 관리하는 테이블인 userInfo를 만들고 거기에 따른 email과 password를 나눴습니다. <br>
+                이렇게 설계한 이유는 먼저 db 외래키 관계를 복습하고 응용하고자 하는 목적으로 설계하였으며, 또 한 약간의 정규화를 이용해 각 테이블에는 각각의 고유 정보만 담도록 만들고자 하였습니다.<br><br>
+                그다음은 게시판 테이블인 flowerBoard를 설계하였습니다. 이 테이블은 일반적인 게시판 형태의 테이블이고 거기에 따른 img를 저장할수있도록 외래캐 설정을 하였습니다.
+                그리고 꽃의 정보를 관리하는 flowerInfo 국가를 관리하는 nationInfo를 각각 설계했으며, 어느나라에 어느 꽃이 있는지 설계하기 위해 연관테이블을 맵핑하여 구축하였습니다.
+            </div>
         </div>
-
+        <hr>
         <h3>먼저 회원가입 담당한 저는 학원에서 수업하지 않는  email 인증을 구현을 해보았습니다.
             <div>
                 <img src="img/code1.png" alt="">

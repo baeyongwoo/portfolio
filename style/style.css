@@ -1,163 +1,223 @@
-/* Your existing styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+html {
+    scroll-behavior: smooth;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    text-align: center;
-}
+        /* Your existing styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-}
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: padding 0.3s, font-size 0.3s;
+        }
 
-header nav ul li {
-    display: inline;
-    margin: 0 1em;
-}
+        header.shrink {
+            padding: 0.5em;
+        }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-}
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            transition: font-size 0.3s;
+        }
 
-main {
-    padding: 2em;
-    max-width: 800px;
-    margin: auto;
-}
+        header.shrink h1 {
+            font-size: 18px;
+        }
 
-section {
-    margin-bottom: 2em;
-}
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    /* position: fixed; */
-    width: 100%;
-    bottom: 0;
-}
+        header nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
 
-/* New styles for the table */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 2em;
-}
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
 
-thead {
-    background-color: #333;
-    color: white;
-}
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
 
-th, td {
-    padding: 1em;
-    text-align: left;
-    border: 1px solid #ddd;
-}
+        main {
+            padding: 2em;
+            max-width: 800px;
+            margin: 5em auto 0 auto; /* Adjusted to account for the fixed header */
+        }
 
-tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
+        section {
+            margin-bottom: 2em;
+            padding-top: 60px; /* Adjusted to account for the fixed header */
+        }
 
-/* 프로젝트 관련 css */
-#projects a {
-    font-weight: bold;
-    color: #007bff;
-    text-decoration: none;
-}
+        .info-item { 
+            margin-bottom: 10px; 
+            font-size: 16px; 
+        } 
+        .info-label { 
+            font-weight: bold; 
+            color: #555555; 
+        }
+        .info-content { 
+            color: #333333; 
+        } 
+        .links { 
+            margin-top: 20px; 
+        } 
+        .link-item { 
+            display: block; 
+            color: #1a73e8; 
+            text-decoration: none; 
+            margin-bottom: 10px; 
+        }
+        .link-item:hover { 
+            text-decoration: underline; 
+        }
 
-#projects a:hover {
-    text-decoration: underline;
-}
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            /* position: fixed; */
+            width: 100%;
+            bottom: 0;
+        }
 
-#projects div {
-    margin-bottom: 1em;
-}
+        /* New styles for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2em;
+        }
 
-img {
-    width: 100%;
-    height: 15%;
-}
+        thead {
+            background-color: #333;
+            color: white;
+        }
 
-/* Button Styling */ 
-#openModalBtn { 
-    cursor: pointer; 
-    color: #ffffff; 
-    background-color: #007bff; 
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 5px; 
-    display: inline-block; 
-    font-weight: bold; 
-    text-align: center; 
-} 
-#openModalBtn:hover { 
-    background-color: #0056b3; 
-}
+        th, td {
+            padding: 1em;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-}
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
 
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
+        /* 프로젝트 관련 css */
+        #projects a {
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
+        }
 
-/* Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+        #projects a:hover {
+            text-decoration: underline;
+        }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+        #projects div {
+            margin-bottom: 1em;
+        }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
+        img {
+            width: 100%;
+            height: 15%;
+        }
 
-table, th, td {
-    border: 1px solid black;
-}
+        /* Button Styling */ 
+        #openModalBtn { 
+            cursor: pointer; 
+            color: #ffffff; 
+            background-color: #007bff; 
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 5px; 
+            display: inline-block; 
+            font-weight: bold; 
+            text-align: center; 
+        } 
+        #openModalBtn:hover { 
+            background-color: #0056b3; 
+        }
 
-th, td {
-    padding: 15px;
-    text-align: left;
-}
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
 
-.imgSize{
-    width: 50px;
-}
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .imgSize{
+            width: 50px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
